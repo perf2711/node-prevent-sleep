@@ -5,6 +5,10 @@
   "author": "Sebastian Alex <sebapotok@gmail.com>",
   "license": "MIT",
   "gypfile": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/perf2711/node-prevent-sleep"
+  },
   "devDependencies": {
     "node-gyp": "^6.1.0"
   },
