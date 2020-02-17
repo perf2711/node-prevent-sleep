@@ -19,9 +19,9 @@ preventSleep.disable();
 
 ### Windows
 
-When `enable()` is used, `SetThreadExecutionState` is run with flags `ES_CONTINUOUS | ES_DISPLAY_REQUIRED`, which disables idle timer of system. The previous execution state is saved.
+When `enable()` is used, power request is created using `PowerCreateRequest` and set using `PowerSetRequest` with flags `PowerRequestSystemRequired` and `PowerRequestDisplayRequired`, which prevents system sleeping.
 
-When `disable()` is used, previous execution state is used as argument to `SetThreadExecutionState`, enabling idle timer again (or just restoring previous behavior).
+When `disable()` is used, power request is cleared using `PowerClearRequest`, restoring previous behavior.
 
 ### Linux
 
