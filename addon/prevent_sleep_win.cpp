@@ -31,7 +31,7 @@ Napi::Value prevent_sleep::disable(const Napi::CallbackInfo &info)
     {
         if (PowerClearRequest(_powerRequestHandle, PowerRequestDisplayRequired))
         {
-            if (PowerClearRequest(_powerRequestHandle, PowerRequestDisplayRequired))
+            if (PowerClearRequest(_powerRequestHandle, PowerRequestSystemRequired))
             {
                 if (CloseHandle(_powerRequestHandle))
                 {
