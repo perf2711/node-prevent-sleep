@@ -35,6 +35,7 @@ Napi::Value prevent_sleep::disable(const Napi::CallbackInfo &info)
             {
                 if (CloseHandle(_powerRequestHandle))
                 {
+                    _powerRequestHandle = NULL;
                     return info.Env().Undefined();
                 }
             }
