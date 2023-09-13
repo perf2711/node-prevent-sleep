@@ -1,15 +1,9 @@
-const internalSleep = require('./build/Release/node_prevent_sleep.node');
+var os = require("os");
 
-const preventSleep = {
-    _timerId: 0,
-    _intervalTime: 5000,
-    enable: () => {
-        preventSleep._timerId = setInterval(internalSleep.enable, preventSleep._intervalTime);
-    },
-    disable: () => {
-        clearInterval(preventSleep._timerId);
-        internalSleep.disable();
-    }
-};
-
-module.exports = preventSleep;
+if (os.platform == "win32") {
+  module.exports = require("./win");
+} else if (os.platform == "darwin") {
+  module.exports = require("./mac");
+} else {
+  throw new Error("Unsupported platform: " + os.platform);
+}

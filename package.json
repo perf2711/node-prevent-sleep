@@ -1,8 +1,19 @@
 {
   "name": "node-prevent-sleep",
-  "version": "0.0.4",
+  "version": "0.1.0",
   "main": "index.js",
-  "author": "Sebastian Alex <sebapotok@gmail.com>",
+  "contributors": [
+    {
+      "name": "Sebastian Alex",
+      "email": "sebapotok@gmail.com",
+      "url": "https://github.com/perf2711"
+    },
+    {
+      "name": "George W. Walker",
+      "email": "george@georgewwalker.com",
+      "url": "https://github.com/pkmnct"
+    }
+  ],
   "license": "MIT",
   "gypfile": true,
   "repository": {
@@ -10,10 +21,10 @@
     "url": "https://github.com/perf2711/node-prevent-sleep"
   },
   "devDependencies": {
-    "node-gyp": "^6.1.0"
+    "node-gyp": "^9.4.0"
   },
   "dependencies": {
-    "node-addon-api": "^2.0.0"
+    "node-addon-api": "^7.0.0"
   },
   "scripts": {
     "build": "node-gyp rebuild",
