@@ -29,7 +29,10 @@ Not supported yet. You are welcome to submit a PR with the functionality.
 
 ### Mac
 
-Not supported yet. You are welcome to submit a PR with the functionality.
+When `enable()` is used, a child `caffeinate` process is spawned with the `-w` flag and the process id of Node. This ensures the child process is terminated if Node quits unexpectedly.
+
+When `disable()` is used, the `caffeinate` process is terminated.
 
 ## License
+
 MIT
